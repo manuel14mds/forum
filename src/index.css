@@ -1,0 +1,17 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: 0;
+
+    --color-one: #b5179e;
+    --color-two: #480ca8;
+    --color-three: #4cc9f0;
+    --color-four: #4895ef;
+    --color-five: #4361ee;
+    --color-six: #3f37c9;
+    --color-seven: #3f37c9;
+
+    /* thin-100, regular-400, medium-600, bold-800 */
+    /* --font: 'Noto Sans Mono', monospace; */
+}
