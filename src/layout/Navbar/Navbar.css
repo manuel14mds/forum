@@ -8,14 +8,14 @@ nav {
 .navlink {
     margin: 10px;
     text-decoration: none;
-    color: var(--color-five);
+    color: var(--color-six);
 }
 
 .navlink:first-child {
     margin-right: auto;
     margin-left: 0px;
     font-weight: 800;
-    color: var(--color-one);
+    color: var(--color-two);
 }
 
 .logo-nav {
@@ -34,5 +34,11 @@ nav {
 
     .navlink:first-child {
         font-size: 1.5rem;
+    }
+}
+
+@media (min-width: 1200px) {
+    nav {
+        padding: 10px 60px;
     }
 }
