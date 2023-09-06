@@ -13,7 +13,7 @@ export const Publications: React.FC = () => {
         <>  
             <header>
                 <Navbar />
-                <Breadcrumbs props = {{ pathList, currentPage }} />
+                <Breadcrumbs key="1" props = {{ pathList, currentPage }} />
                 <h1 className="Publications-title">All Publications</h1>
             </header>
             

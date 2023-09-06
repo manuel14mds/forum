@@ -1,10 +1,11 @@
 .Publications-title {
-    color: aqua;
+    color: var(--color-two);
     margin: 20px;
+    font-size: 3rem;
     text-align: center;
 }
 .posts-container{
-    background-color: antiquewhite;
+    background-color: black;
     padding: 20px;
 }
 
@@ -19,5 +20,8 @@
 @media (min-width: 1200px) {
     .posts-container{
         padding: 60px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
     }
 }
