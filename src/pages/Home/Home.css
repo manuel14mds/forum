@@ -20,7 +20,7 @@
 /* publications section */
 .publications {
     padding: 20px;
-    background-color: var(--color-two);
+    background-color: var(--color-nine);
 }
 
 .publications-title {
@@ -236,9 +236,9 @@
         font-size: 1.1rem;
     }
 
-    /* -----++++++++++++######   media query DESKTOP resolution [   1200   ]  ######++++++++++++-----*/
 }
 
+/* -----++++++++++++######   media query DESKTOP resolution [   1200   ]  ######++++++++++++-----*/
 @media (min-width: 1200px) {
 
     /* about section */

@@ -1,11 +1,12 @@
+import { Link } from 'wouter'
 import './Navbar.css'
 
 export const Navbar: React.FC = () => {
     return (
         <nav>
-            <a className='navlink' href="">World Forum</a>
-            <a className='navlink' href="">Home</a>
-            <a className='navlink' href="">Publications</a>
+            <Link className='navlink' href="/home">World Forum</Link>
+            <Link className='navlink' href="/home">Home</Link>
+            <Link className='navlink' href="/publications">Publications</Link>
         </ nav>
     )
 }

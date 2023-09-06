@@ -1,0 +1,80 @@
+.post{
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    padding: 10px 0px;
+    margin-bottom: 5px;
+}
+.post .post-id{
+    background-color: aquamarine;
+    font-size: 0.9rem;
+    display: block;
+    width: 130px;
+}
+.post-info-box{
+    background-color: aqua;
+}
+.post-info-box .post-title{
+    font-size: 0.8rem;
+}
+.post-info-box .post-description{
+    font-size: 0.6rem;
+}
+.detail-btn-box{
+    background-color: blanchedalmond;
+    padding-left: 1px;
+}
+
+/* -----++++++++++++######   media query TABLET resolution [ 500 ]  ######++++++++++++-----*/
+@media (min-width: 500px) {
+    .post{ 
+        padding: 15px 0px;
+    }
+    .post .post-id{
+        font-size: 1.2rem;
+        width: 170px;
+    }
+    .post-info-box .post-title{
+        font-size: 1.1rem;
+    }
+    .post-info-box .post-description{
+        font-size: 0.9rem;
+    }
+    .detail-btn-box{
+        width: 180px;
+        padding-left: 3px;
+    }
+    .detail-btn-box .see-post-detail{
+        font-size: 1.1rem;
+    }
+    .detail-btn-box .see-post-detail::before{
+        content: "detail ";
+    }
+}
+
+/* -----++++++++++++######   media query DESKTOP resolution [   1200   ]  ######++++++++++++-----*/
+@media (min-width: 1200px) {
+    .post .post-id{
+        background-color: aquamarine;
+        font-size: 1.3rem;
+        display: block;
+        width: 170px;
+    }
+    .post-info-box .post-title{
+        font-size: 1.3rem;
+    }
+    .post-info-box .post-description{
+        font-size: 1.1rem;
+    }
+    .detail-btn-box{
+        width: 180px;
+        padding-left: 3px;
+    }
+    .detail-btn-box .see-post-detail{
+        font-size: 1.2rem;
+    }
+    .detail-btn-box .see-post-detail::before{
+        content: "see detail ";
+    }
+}

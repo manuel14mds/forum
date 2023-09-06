@@ -1,4 +1,4 @@
-header {
+.header {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -27,7 +27,7 @@ header {
 
 
 @media (min-width: 500px) {
-    header {
+    .header {
         align-items: center;
     }
 

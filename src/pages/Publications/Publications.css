@@ -1,0 +1,23 @@
+.Publications-title {
+    color: aqua;
+    margin: 20px;
+    text-align: center;
+}
+.posts-container{
+    background-color: antiquewhite;
+    padding: 20px;
+}
+
+/* -----++++++++++++######   media query TABLET resolution [ 500 ]  ######++++++++++++-----*/
+@media (min-width: 500px) {
+    .posts-container{
+        padding: 40px 30px;
+    }
+}
+
+/* -----++++++++++++######   media query DESKTOP resolution [   1200   ]  ######++++++++++++-----*/
+@media (min-width: 1200px) {
+    .posts-container{
+        padding: 60px;
+    }
+}
