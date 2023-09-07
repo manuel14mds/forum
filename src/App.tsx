@@ -1,7 +1,7 @@
-import { Route } from 'wouter'
+import { Route, Switch } from 'wouter'
 import './App.css'
 import { Footer } from './layout/index'
-import { Home, Publications, PostDetail } from './pages'
+import { Home, Publications, PostDetail, NotFound } from './pages'
 
 
 
@@ -9,12 +9,14 @@ function App() {
 
     return (
         <>
-            <Route path='/' component={Home} />
-            <Route path='/publications' component={Publications}/>
-            <Route path='/post' component={PostDetail} />
-{/*             <Route path='/postDetail:pid' component={PostDetail} />
-            <Route path='/:rest*' component={PostDetail} /> */}
+            <Switch>
+                <Route path='/' component={Home} />
+                <Route path='/publications' component={Publications}/>
+                <Route path='/postDetail:pid' component={PostDetail} />
+                <Route  component={NotFound} />
+            </Switch>
             <Footer />
+            {/* <Route path='/postDetail:pid' component={PostDetail} />*/}
         </>
     )
 }

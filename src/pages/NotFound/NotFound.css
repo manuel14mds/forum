@@ -1,0 +1,54 @@
+.notFound-box{
+    height: 84vh;
+    background-color: var(--color-five);
+    display: grid;
+    place-items: center;
+}
+.error-box{
+    background-color: var(--color-one);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px;
+    width: 300px;
+    height: 300px;
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70% ;
+}
+.error-box .notFound-img{
+    width: 130px;
+}
+.error-box .notFound-title{
+    width: 150px;
+    color: var(--color-ten);
+}
+
+/* -----++++++++++++######   media query TABLET resolution [ 500 ]  ######++++++++++++-----*/
+@media (min-width: 500px) {
+    .error-box{
+        justify-content: center;
+        width: 350px;
+        height: 350px;
+    }
+    .error-box .notFound-img{
+        width: 150px;
+    }
+    .error-box .notFound-title{
+        font-size: 2.1rem;
+    }
+}
+
+/* -----++++++++++++######   media query DESKTOP resolution [   1200   ]  ######++++++++++++-----*/
+@media (min-width: 1200px) {
+    .error-box{
+        justify-content: center;
+        width: 500px;
+        height: 500px;
+    }
+    .error-box .notFound-img{
+        width: 150px;
+    }
+    .error-box .notFound-title{
+        width: 200px;
+        font-size: 3rem;
+    }
+}

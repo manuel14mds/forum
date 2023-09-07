@@ -1,3 +1,4 @@
+import { Link } from 'wouter'
 import './Post.css'
 
 export const Post: React.FC = () => {
@@ -9,7 +10,7 @@ export const Post: React.FC = () => {
                 <p className="post-description">et iusto sed quo iure voluptatem occaecati omnis eligendi aut ad voluptatem doloribus vel accusantium quis pariatur molestiae porro eius odio et labore et velit aut</p>
             </div>
             <div className="detail-btn-box">
-                <a className='see-post-detail'>&rarr;</a>
+                <Link className='see-post-detail' to='/postDetail500'>&rarr;</Link>
             </div>
         </div>
     )

@@ -2,6 +2,7 @@ import { Breadcrumbs, Navbar } from '../../layout'
 import { PathList } from '../../types.s'
 import './PostDetail.css'
 import loading from '../../assets/pink-loader.svg'
+import { useRoute } from 'wouter'
 // interface PropsType {}
 // export const PostDetail: React.FC<{ props: PropsType }> = () => {
 export const PostDetail: React.FC = () => {
@@ -10,11 +11,15 @@ export const PostDetail: React.FC = () => {
         {name: 'Publications', path: '/publications'}
     ]
     const currentPage: string = 'Post Detail'
+
+    const [match, params] = useRoute('/postDetail:pid')
+
+    console.log(params?.pid)
     return (
         <>
         <header className='header-detail'>
             <Navbar />
-            <Breadcrumbs props={{ pathList, currentPage}} key={2}/>
+            <Breadcrumbs props={{ pathList, currentPage}} />
             <h1 className='publication-title'>Publication Detail</h1>
         </header>
 
