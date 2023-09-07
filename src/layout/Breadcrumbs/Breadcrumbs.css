@@ -1,12 +1,11 @@
 ul.breadcrumb {
-    padding: 10px 20px;
+    padding: 10px 0px;
     list-style: none;
-    background-color: var(--color-ten);
 }
 
 ul.breadcrumb li {
     display: inline;
-    font-size: 18px;
+    font-size: 11px;
 }
 
 ul.breadcrumb li+li:before {
@@ -23,4 +22,18 @@ ul.breadcrumb li .link-a {
 ul.breadcrumb li .link-a:hover {
     color: #01447e;
     text-decoration: underline;
+}
+/* -----++++++++++++######   media query TABLET resolution [ 500 ]  ######++++++++++++-----*/
+@media (min-width: 500px) {
+    ul.breadcrumb li {
+        font-size: 15px;
+    }
+}
+
+
+/* -----++++++++++++######   media query DESKTOP resolution [   1200   ]  ######++++++++++++-----*/
+@media (min-width: 1200px) {
+    ul.breadcrumb li {
+        font-size: 18px;
+    }
 }

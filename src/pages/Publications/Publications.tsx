@@ -2,11 +2,13 @@ import { Post } from "../../components"
 import { Navbar } from "../../layout"
 import { Breadcrumbs } from "../../layout"
 import { PathList } from "../../types.s"
+import loadingp from '../../assets/pink-loader.svg'
+import loadingb from '../../assets/blue-loader.svg'
 
 import './Publications.css'
 export const Publications: React.FC = () => {
     const pathList : PathList = [
-        {name: 'Home', path: '/home'}
+        {name: 'Home', path: '/'}
     ]
     const currentPage: string = 'Publications'
     return (
@@ -20,10 +22,13 @@ export const Publications: React.FC = () => {
             <main>
                 <div className="posts-container" role="list">
                     <Post />
-                    <Post />
-                    <Post />
-                    <Post />
-                    <Post />
+
+                    <div className="box-publi-loading" role="listitem">
+                        <img className='detail-btn-box  publi-loading' src={loadingp}/>
+                        <img className="post-info-box publi-loading" src={loadingb} />
+                        <img className="detail-btn-box publi-loading" src={loadingp} />
+                    </div>
+
                 </div>
             </main>
         </ >
