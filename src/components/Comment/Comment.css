@@ -1,0 +1,62 @@
+
+.detail-box .item-comment-list{
+    min-height: 70px;
+    border-bottom: solid black 1px;
+    margin-bottom: 10px;
+}
+.detail-box .item-comment-list .comment-title{
+    font-size: 0.7rem;
+    text-transform: capitalize;
+    color: black;
+}
+.detail-box .item-comment-list .comment-body{
+    color: black;
+    font-size: 0.7rem;
+    text-align: left;
+    
+}
+.detail-box .item-comment-list .comment-email{
+    color: black;
+    font-size: 0.6rem;
+    padding-left: 5px;
+    overflow-y: scroll;
+    height: 20px;
+}
+
+
+/* -----++++++++++++######   media query TABLET resolution [ 500 ]  ######++++++++++++-----*/
+@media (min-width: 500px) {
+    .detail-box .item-comment-list{
+        margin-bottom: 15px;
+        padding: 5px 0px;
+    }
+    .detail-box .item-comment-list .comment-title{
+        font-size: 0.9rem;
+    }
+    .detail-box .item-comment-list .comment-body{
+        font-size: 0.9rem;
+    }
+    .detail-box .item-comment-list .comment-email{
+        font-size: 0.6rem;
+        padding-left: 0px;
+        height: 22px;
+    }
+}
+
+/* -----++++++++++++######   media query DESKTOP resolution [   1200   ]  ######++++++++++++-----*/
+@media (min-width: 1200px) {
+    .detail-box .item-comment-list{
+        margin-bottom: 20px;
+        padding: 5px 0px;
+        height: 100px;
+    }
+    .detail-box .item-comment-list .comment-title{
+        font-size: 1.3rem;
+    }
+    .detail-box .item-comment-list .comment-body{
+        font-size: 1.1rem;
+    }
+    .detail-box .item-comment-list .comment-email{
+        font-size: 1.1rem;
+    }
+}

@@ -1,20 +1,51 @@
 import { Breadcrumbs, Navbar } from '../../layout'
-import { PathList } from '../../types.s'
+import type { PathList, Post, CommentList } from '../../types.s'
 import './PostDetail.css'
 import loading from '../../assets/pink-loader.svg'
+import loadingPost from '../../assets/three-dots-loading.svg'
 import { useRoute } from 'wouter'
-// interface PropsType {}
-// export const PostDetail: React.FC<{ props: PropsType }> = () => {
+import { useEffect, useState } from 'react'
+import { API_POST_URL, API_COMMENTS_URL } from '../../utils/constants'
+import { Comment } from '../../components'
+
+
+
+
+
 export const PostDetail: React.FC = () => {
+    const [render, setRender] = useState(false)
+    const [ publication, setPublication ]  = useState<Post>()
+    const [ comments, setComments ]  = useState<CommentList>()
+
     const pathList : PathList = [
         {name: 'Home', path: '/'},
         {name: 'Publications', path: '/publications'}
     ]
     const currentPage: string = 'Post Detail'
 
-    const [match, params] = useRoute('/postDetail:pid')
 
-    console.log(params?.pid)
+    // get toute param
+    const route = useRoute('/postDetail:pid')
+    const params = route[1]?.pid
+
+    
+    useEffect (() => {
+        try {
+            fetch(API_POST_URL+params)
+            .then(response => response.json())
+            .then(json => (setPublication(json)) )
+            .catch(()=> console.log('ERROR in reguest publication'))
+
+            fetch(API_COMMENTS_URL+params)
+            .then(response => response.json())
+            .then(json => ( setComments(json) ))
+            .catch(()=> console.log('ERROR in reguest'))
+            .finally(()=> setRender(true))
+        } catch (error) {
+            return
+        }
+    },[params])
+
     return (
         <>
         <header className='header-detail'>
@@ -25,9 +56,20 @@ export const PostDetail: React.FC = () => {
 
         <main>
             <section className='detail-box'>
-                <h2 className='post-title'>sunt aut facere repellat provident occaecati excepturi optio reprehenderit</h2>
-                <p className='post-body'>quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto</p>
-                <p className='post-id'>post id: 1</p>
+                {
+                    !render ?
+                    <>
+                        <img className='post-title-loading' src={loadingPost}/>
+                        <img className='post-title-loading' src={loadingPost}/>
+                        <img className='post-title-loading' src={loadingPost}/>
+                    </>
+                    :
+                    <>
+                        <h2 className='post-title'>{publication?.title}</h2>
+                        <p className='post-body'>{publication?.body}</p>
+                        <p className='post-id'>post id: {publication?.id}</p>
+                    </>
+                }
 
                 <div className="head-comment-list parent">
                     <h3 className="comment-title item-grid-1">Title</h3>
@@ -36,31 +78,28 @@ export const PostDetail: React.FC = () => {
                 </div>
 
                 <div className="box-comment">
-                    <div className="item-comment-list parent">
-                        <h4 className="comment-title item-grid-1">quo vero reiciendis velit similique earum"</h4>
-                        <p className="comment-body item-grid-2">est natus enim nihil est dolore omnis voluptatem numquam\net omnis occaecati quod ullam at\nvoluptatem error expedita pariatur\nnihil sint nostrum voluptatem reiciendis et</p>
-                        <p className="comment-email item-grid-3">Jayne_Kuhic@sydney.com"</p>
-                    </div>
-                    <div className="item-comment-list parent">
-                        <h4 className="comment-title item-grid-1">quo vero reiciendis velit similique earum"</h4>
-                        <p className="comment-body item-grid-2">est natus enim nihil est dolore omnis voluptatem numquam\net omnis occaecati quod ullam at\nvoluptatem error expedita pariatur\nnihil sint nostrum voluptatem reiciendis et</p>
-                        <p className="comment-email item-grid-3">Jayne_Kuhic@sydney.com"</p>
-                    </div>
-                    <div className="item-comment-list parent">
-                        <h4 className="comment-title item-grid-1">quo vero reiciendis velit similique earum"</h4>
-                        <p className="comment-body item-grid-2">est natus enim nihil est dolore omnis voluptatem numquam\net omnis occaecati quod ullam at\nvoluptatem error expedita pariatur\nnihil sint nostrum voluptatem reiciendis et</p>
-                        <p className="comment-email item-grid-3">Jayne_Kuhic@sydney.com"</p>
-                    </div>
-                    <div className="item-comment-list parent">
-                        <h4 className="comment-title item-grid-1">quo vero reiciendis velit similique earum"</h4>
-                        <p className="comment-body item-grid-2">est natus enim nihil est dolore omnis voluptatem numquam\net omnis occaecati quod ullam at\nvoluptatem error expedita pariatur\nnihil sint nostrum voluptatem reiciendis et</p>
-                        <p className="comment-email item-grid-3">Jayne_Kuhic@sydney.com"</p>
-                    </div>
-                    <div className="item-comment-list parent">
-                        <img className="item-grid-1 loading-img" src={loading}/>
-                        <img className="item-grid-2 loading-img" src={loading}/>
-                        <img className="item-grid-3 loading-img" src={loading}/>
-                    </div>
+                    {
+                        !render?
+                        <div className="item-comment-list parent">
+                            <img className="item-grid-1 loading-img" src={loading}/>
+                            <img className="item-grid-2 loading-img" src={loading}/>
+                            <img className="item-grid-3 loading-img" src={loading}/>
+                        </div>
+                        :
+                        <>
+                            {
+                                comments?.map(item  => (
+                                    <Comment props={{ comment:item }} key={item.id}/>
+                                ))
+                            }
+                        </>
+                    }
+                    
+                        <div className="item-comment-list parent">
+                            <h4 className="comment-title item-grid-1">quo vero reiciendis velit similique earum"</h4>
+                            <p className="comment-body item-grid-2">est natus enim nihil est dolore omnis voluptatem numquam\net omnis occaecati quod ullam at\nvoluptatem error expedita pariatur\nnihil sint nostrum voluptatem reiciendis et</p>
+                            <p className="comment-email item-grid-3">Jayne_Kuhic@sydney.com"</p>
+                        </div>
 
                 </div>
 

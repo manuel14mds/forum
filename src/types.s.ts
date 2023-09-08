@@ -11,3 +11,13 @@ export type Post = {
     body:   string;
 }
 export type Publications = Post[]
+
+export type CommentType = {
+    postId: number;
+    id:     number;
+    name:   string;
+    email:  string;
+    body:   string;
+}
+export type CommentList = CommentType[]
+

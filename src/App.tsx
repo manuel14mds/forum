@@ -16,7 +16,6 @@ function App() {
                 <Route  component={NotFound} />
             </Switch>
             <Footer />
-            {/* <Route path='/postDetail:pid' component={PostDetail} />*/}
         </>
     )
 }

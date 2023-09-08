@@ -28,6 +28,10 @@
     margin-bottom: 10px;
     color: white;
 }
+.detail-box .post-title-loading{
+    display: inline;
+    height: 80px;
+}
 
 
 .parent{
@@ -79,30 +83,6 @@
     min-height: 400px;
     overflow-x: scroll;
 }
-.detail-box .item-comment-list{
-
-    min-height: 70px;
-    border-bottom: solid black 1px;
-    margin-bottom: 10px;
-}
-.detail-box .item-comment-list .comment-title{
-    font-size: 0.7rem;
-    text-transform: capitalize;
-    color: black;
-}
-.detail-box .item-comment-list .comment-body{
-    color: black;
-    font-size: 0.7rem;
-    text-align: left;
-    
-}
-.detail-box .item-comment-list .comment-email{
-    color: black;
-    font-size: 0.6rem;
-    padding-left: 5px;
-    overflow-y: scroll;
-    height: 20px;
-}
 .loading-img{
     width: 50px;
     margin-left: 10px;
@@ -120,6 +100,10 @@
     }
     .detail-box{
         padding: 30px 30px;
+    }
+    .detail-box .post-title-loading{
+        display: inline;
+        height: 120px;
     }
 
 
@@ -156,21 +140,6 @@
     .box-comment{
         min-height: 500px;
     }
-    .detail-box .item-comment-list{
-        margin-bottom: 15px;
-        padding: 5px 0px;
-    }
-    .detail-box .item-comment-list .comment-title{
-        font-size: 0.9rem;
-    }
-    .detail-box .item-comment-list .comment-body{
-        font-size: 0.9rem;
-    }
-    .detail-box .item-comment-list .comment-email{
-        font-size: 0.6rem;
-        padding-left: 0px;
-        height: 22px;
-    }
     .loading-img{
         width: 60px;
         margin-left: 15px;
@@ -186,11 +155,15 @@
     .publication-title {
         font-size: 2.3rem;
     }
-    .detail-box{
-        padding: 60px 60px;
+    .detail-box .post-title-loading{
+        display: inline;
+        height: 160px;
     }
 
 
+    .detail-box{
+        padding: 60px 60px;
+    }
     .detail-box .post-title{
         font-size: 1.8rem;
         margin-bottom: 15px;
@@ -228,20 +201,6 @@
     }
     .box-comment{
         min-height: 500px;
-    }
-    .detail-box .item-comment-list{
-        margin-bottom: 20px;
-        padding: 5px 0px;
-        height: 100px;
-    }
-    .detail-box .item-comment-list .comment-title{
-        font-size: 1.3rem;
-    }
-    .detail-box .item-comment-list .comment-body{
-        font-size: 1.1rem;
-    }
-    .detail-box .item-comment-list .comment-email{
-        font-size: 1.1rem;
     }
     .loading-img{
         width: 80px;
