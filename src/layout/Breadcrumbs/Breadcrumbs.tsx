@@ -13,7 +13,7 @@ export const Breadcrumbs: React.FC<{ props: PropsType }> = ({ props }) => {
         <ul className="breadcrumb">
             {
                 pathList.map(item => (
-                    <li><Link className='link-a' href={item.path}>{item.name}</Link></li>
+                    <li key={item.name}><Link className='link-a' href={item.path}>{item.name}</Link></li>
                 ))
             }
             <li>{currentPage}</li>

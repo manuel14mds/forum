@@ -4,7 +4,7 @@
     justify-content: left;
     padding: 10px 0px;
     margin-bottom: 9px;
-    max-width: 1280px;
+    width: 100%;
 
     -webkit-box-shadow: 0px 15px 14px -14px rgba(76,201,240,0.93);
     -moz-box-shadow: 0px 15px 14px -14px rgba(76,201,240,0.93);
@@ -19,6 +19,7 @@
 .post-info-box .post-title{
     font-size: 0.8rem;
     margin-bottom: 5px;
+    text-transform: capitalize;
     color: var(--color-ten);
 }
 .post-info-box .post-description{
@@ -29,6 +30,14 @@
     padding-left: 1px;
     text-align: right;
     color: var(--color-one);
+}
+.detail-btn-box .see-post-detail{
+    text-decoration: none;
+    color: unset;
+}
+.detail-btn-box .see-post-detail:visited{
+    text-decoration: none;
+    color: unset;
 }
 
 /* -----++++++++++++######   media query TABLET resolution [ 500 ]  ######++++++++++++-----*/
@@ -49,6 +58,8 @@
     .detail-btn-box{
         width: 180px;
         padding-left: 3px;
+        margin-left: auto;
+        margin-right: 10px;
     }
     .detail-btn-box .see-post-detail{
         font-size: 1.1rem;
@@ -61,6 +72,9 @@
 
 /* -----++++++++++++######   media query DESKTOP resolution [   1200   ]  ######++++++++++++-----*/
 @media (min-width: 1200px) {
+    .post{
+        max-width: 1280px;
+    }
     .post .post-id{
         font-size: 1.3rem;
 
@@ -75,6 +89,7 @@
     .detail-btn-box{
         width: 180px;
         padding-left: 3px;
+        margin-right: 15px;
     }
     .detail-btn-box .see-post-detail{
         font-size: 1.2rem;

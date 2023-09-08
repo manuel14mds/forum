@@ -1,3 +1,6 @@
+.header-publications{
+    padding: 0px 20px;
+}
 .Publications-title {
     color: var(--color-two);
     margin: 20px;
@@ -19,6 +22,9 @@
 }
 /* -----++++++++++++######   media query TABLET resolution [ 500 ]  ######++++++++++++-----*/
 @media (min-width: 500px) {
+    .header-publications{
+        padding: 0px 30px;
+    }
     .posts-container{
         padding: 40px 30px;
     }
@@ -30,6 +36,9 @@
 
 /* -----++++++++++++######   media query DESKTOP resolution [   1200   ]  ######++++++++++++-----*/
 @media (min-width: 1200px) {
+    .header-publications{
+        padding: 0px 60px;
+    }
     .posts-container{
         padding: 60px;
         display: flex;
