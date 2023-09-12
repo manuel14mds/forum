@@ -1,4 +1,5 @@
 import { Link } from 'wouter'
+
 import './Navbar.css'
 
 export const Navbar: React.FC = () => {

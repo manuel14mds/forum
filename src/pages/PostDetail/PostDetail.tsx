@@ -1,4 +1,5 @@
 import { Breadcrumbs, Navbar } from '../../layout'
+
 import type { PathList } from '../../types.s'
 import './PostDetail.css'
 import loading from '../../assets/pink-loader.svg'

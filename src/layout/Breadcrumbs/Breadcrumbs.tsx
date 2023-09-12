@@ -1,6 +1,8 @@
 import { Link } from 'wouter'
+
+import { PathList } from '../../types.s'
+
 import './Breadcrumbs.css'
-import { PathList } from '../../types.s' 
 
 interface PropsType {
     pathList : PathList

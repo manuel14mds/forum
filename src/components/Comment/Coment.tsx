@@ -1,4 +1,5 @@
 import { CommentType } from "../../types.s"
+
 import './Comment.css'
 
 interface PropsType {

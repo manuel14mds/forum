@@ -1,6 +1,8 @@
 import { Link } from 'wouter'
+
+import type { Post as TypePost } from '../../types.s'
+
 import './Post.css'
-import { type Post as TypePost } from '../../types.s'
 
 interface PropsType {
     post: TypePost

@@ -1,10 +1,11 @@
+import loadingb from '../../assets/blue-loader.svg'
+import loadingp from '../../assets/pink-loader.svg'
 import { Post } from "../../components"
 import { Navbar } from "../../layout"
 import { Breadcrumbs } from "../../layout"
 import { PathList } from "../../types.s"
-import loadingp from '../../assets/pink-loader.svg'
-import loadingb from '../../assets/blue-loader.svg'
 import { usePublications } from "../../utils/hooks/usePublicatios"
+
 import './Publications.css'
 
 export const Publications: React.FC = () => {

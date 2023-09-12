@@ -1,9 +1,9 @@
 import { Route, Switch } from 'wouter'
-import './App.css'
+
 import { Footer } from './layout/index'
-import { Home, Publications, PostDetail, NotFound } from './pages'
+import { Home, NotFound, PostDetail, Publications } from './pages'
 
-
+import './App.css'
 
 function App() {
 

@@ -1,7 +1,7 @@
-
-import { Navbar } from '../../layout'
-import './NotFound.css'
 import notFound from '../../assets/error-404.svg'
+import { Navbar } from '../../layout'
+
+import './NotFound.css'
 
 export const NotFound: React.FC = () => {
     return (

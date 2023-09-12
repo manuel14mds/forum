@@ -1,7 +1,7 @@
-import { Navbar } from '../Navbar/Navbar'
 import logo from '../../assets/logo.png'
-import './Header.css'
+import { Navbar } from '../Navbar/Navbar'
 
+import './Header.css'
 
 export const Header: React.FC = () => {
     return (

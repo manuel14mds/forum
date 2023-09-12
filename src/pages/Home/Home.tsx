@@ -1,13 +1,15 @@
 import { Link } from 'wouter'
-import './Home.css'
+
 import economy from '../../assets/publications/economy.jpg'
-import sport from '../../assets/publications/sport.jpg'
 import music from '../../assets/publications/music.jpg'
 import politic from '../../assets/publications/politic.png'
+import sport from '../../assets/publications/sport.jpg'
 import eslint from '../../assets/technologies/eslint.svg'
-import typescript from '../../assets/technologies/typescript-icon.svg'
 import reactIcon from '../../assets/technologies/react.svg'
+import typescript from '../../assets/technologies/typescript-icon.svg'
 import { Header } from '../../layout'
+
+import './Home.css'
 
 export const Home: React.FC = () => {
     return (
