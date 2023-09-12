@@ -3,7 +3,7 @@
 
 This Web Aplication is the culmination of my efforts to apply and demonstrate some of my key skills and it serves as a testament to my dedication to honing my skills in React.js and showcasing my proficiency in various aspects of web development.
 
-<img src="assets/sample/desktop-samplegif" alt="NavigationDemo" width="550"/>
+<img src="src/assets/samples/desktop-sample.gif" alt="NavigationDemo" width="550"/>
 
 ### Deploy Netlify
 [Website](https://github.com/molefrog/wouter) control/command + click to see
@@ -21,7 +21,7 @@ To showcase my abilities in handling RESTful APIs, I've integrated the free Plac
 ### Web Responsiveness: 
 Ensuring a seamless user experience across devices is vital. My application is fully responsive, adapting gracefully to different screen sizes, from mobile to desktop.
 
-<img src="assets/sample/mobile-samplegif" alt="NavigationDemo" width="250"/>
+<img src="src/assets/samples/mobile-sample.gif" alt="NavigationDemo" width="200"/>
 
 
 
