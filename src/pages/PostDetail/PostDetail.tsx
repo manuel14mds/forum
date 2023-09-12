@@ -10,7 +10,7 @@ import { usePostDetail } from '../../utils/hooks/usePostDetail'
 
 
 export const PostDetail: React.FC = () => {
-    // get toute param
+    // get route param
     const route = useRoute('/postDetail:pid')
     const param = route[1]?.pid
 
