@@ -1,50 +1,25 @@
 import { Breadcrumbs, Navbar } from '../../layout'
-import type { PathList, Post, CommentList } from '../../types.s'
+import type { PathList } from '../../types.s'
 import './PostDetail.css'
 import loading from '../../assets/pink-loader.svg'
 import loadingPost from '../../assets/three-dots-loading.svg'
 import { useRoute } from 'wouter'
-import { useEffect, useState } from 'react'
-import { API_POST_URL, API_COMMENTS_URL } from '../../utils/constants'
 import { Comment } from '../../components'
-
-
-
+import { usePostDetail } from '../../utils/hooks/usePostDetail'
 
 
 export const PostDetail: React.FC = () => {
-    const [render, setRender] = useState(false)
-    const [ publication, setPublication ]  = useState<Post>()
-    const [ comments, setComments ]  = useState<CommentList>()
+    // get toute param
+    const route = useRoute('/postDetail:pid')
+    const param = route[1]?.pid
+
+    const { publication, comments, render }= usePostDetail(param)
 
     const pathList : PathList = [
         {name: 'Home', path: '/'},
         {name: 'Publications', path: '/publications'}
     ]
     const currentPage: string = 'Post Detail'
-
-
-    // get toute param
-    const route = useRoute('/postDetail:pid')
-    const params = route[1]?.pid
-
-    
-    useEffect (() => {
-        try {
-            fetch(API_POST_URL+params)
-            .then(response => response.json())
-            .then(json => (setPublication(json)) )
-            .catch(()=> console.log('ERROR in reguest publication'))
-
-            fetch(API_COMMENTS_URL+params)
-            .then(response => response.json())
-            .then(json => ( setComments(json) ))
-            .catch(()=> console.log('ERROR in reguest'))
-            .finally(()=> setRender(true))
-        } catch (error) {
-            return
-        }
-    },[params])
 
     return (
         <>
@@ -100,7 +75,6 @@ export const PostDetail: React.FC = () => {
                             <p className="comment-body item-grid-2">est natus enim nihil est dolore omnis voluptatem numquam\net omnis occaecati quod ullam at\nvoluptatem error expedita pariatur\nnihil sint nostrum voluptatem reiciendis et</p>
                             <p className="comment-email item-grid-3">Jayne_Kuhic@sydney.com"</p>
                         </div>
-
                 </div>
 
             </section>

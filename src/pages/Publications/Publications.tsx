@@ -4,7 +4,7 @@ import { Breadcrumbs } from "../../layout"
 import { PathList } from "../../types.s"
 import loadingp from '../../assets/pink-loader.svg'
 import loadingb from '../../assets/blue-loader.svg'
-import { API_POSTS_URL } from "../../utils/constants"
+import { API_POSTS_URL } from "../../utils/constants/apiUrls"
 
 import type { Publications as TypePosts } from '../../types.s'
 
