@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
 * {
     box-sizing: border-box;
     margin: 0;
@@ -15,6 +16,8 @@
     --color-nine: #4895ef;
     --color-ten: #4cc9f0;
 
-    /* thin-100, regular-400, medium-600, bold-800 */
-    /* --font: 'Noto Sans Mono', monospace; */
+
+    font-family: 'Roboto', sans-serif;
+
 }
+

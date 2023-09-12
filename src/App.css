@@ -1,1 +1,18 @@
 
+@media (min-width: 1250px) {
+    body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background: fixed;
+        background: rgb(247,37,133);
+        background: -moz-radial-gradient(circle, rgba(247,37,133,1) 48%, rgba(76,201,240,1) 78%);
+        background: -webkit-radial-gradient(circle, rgba(247,37,133,1) 48%, rgba(76,201,240,1) 78%);
+        background: radial-gradient(circle, rgba(247,37,133,1) 48%, rgba(76,201,240,1) 78%);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#f72585",endColorstr="#4cc9f0",GradientType=1); 
+    }
+    #root {
+        max-width: 1300px;
+        background-color: white;
+    }
+}
